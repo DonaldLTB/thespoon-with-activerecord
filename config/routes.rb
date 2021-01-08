@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   # # delete a restaurant
   # delete '/restaurants/:id', to: 'restaurants#destroy'
   resources :restaurants
+  # if we dont want to use all from resources we can filter
+  # for e.g. resources :restaurants, only: [:create, :index, :destroy]
+  # OR resources :restaurants, :except [:create, :index, :destroy]
 end

@@ -1,2 +1,10 @@
 <h1><%= @restaurant.name %><%= '⭐️' * @restaurant.rating %></h1>
   <p><%= @restaurant.address %></p>
+<%= link_to 'back', restaurants_path %>
+<%= link_to 'edit', edit_restaurant_path(@restaurant) %>
+<%= link_to 'delete', restaurant_path(@restaurant), method: :delete, data: { confirm: 'Are you sure?' } %>
+<!-- delete is not a get but a delete, so need to specifiy method to delete.
+otherwise is going to do a get and tell us that it can not find the page or
+will go back to the show page (in our case).
+added data hash with confirming with the user if he really wanna delete it.
+Kind of an alert -->

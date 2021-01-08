@@ -1,0 +1,37 @@
+<%= render 'form' %>
+
+<!-- <%= form_for @restaurant do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :address %>
+  <%= f.text_field :address %>
+  <%= f.label :rating %>
+  <%= f.number_field :rating %>
+  <%= f.submit %>
+<% end %> -->
+
+<!-- <form action="/restaurants" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="name">Name</label>
+  <input type="text" name="restaurant[name]">
+  <label for="address">Address</label>
+  <input type="text" name="restaurant[address]">
+  <label for="rating">Rating</label>
+  <input type="number" name="restaurant[rating]">
+  <input type="submit">
+</form> -->
+
+
+<!-- Overview -->
+<!-- params[:name]
+params[:address]
+params[:rating]
+Restaurant.create(params[:restaurant])
+Restaurant.create(name: 'burger king', address: 'london', rating: 2)
+params = {
+  restaurant: {
+    name: 'burger king',
+    address: 'london',
+    rating: 2
+  }
+} -->

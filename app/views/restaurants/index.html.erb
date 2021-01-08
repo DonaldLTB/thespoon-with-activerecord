@@ -1,5 +1,9 @@
 <h1>All the restaurants</h1>
+<%= link_to 'Create a new restaurant', new_restaurant_path %>
 <% @restaurants.each do |restaurant| %>
-  <h5><%= restaurant.name %> <%= '⭐️' * restaurant.rating %></h5>
+  <h5><%= link_to restaurant.name, restaurant_path(restaurant.id) %> <%= '⭐️' * restaurant.rating %></h5>
   <p><%= restaurant.address %></p>
 <% end %>
+<!-- restaurant.id doesnt have to be like that.
+just to understand that if it would be just restaurant we call
+it is actually the id from the restaurant -->
